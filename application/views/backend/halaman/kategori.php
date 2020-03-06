@@ -12,8 +12,8 @@
 
   				<!-- /.card-header -->
   				<div class="card-body">
-                  <button type="button" class="btn btn-info btn-sm" style="margin-bottom:10px" data-toggle="modal" data-target="#addKategori">Tambah Data</button>
-  					<table id="" class="table table-bordered table-striped">
+                  <button type="button" class="btn btn-info btn-sm" style="margin-bottom:10px" data-toggle="modal" data-target="#addKategori" onClick="submit('tambah')">Tambah Data</button>
+  					<table id="example1" class="table table-bordered table-striped">
   						<thead>
   							<tr>
   								<th width="6%">Exs</th>
@@ -41,7 +41,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="addKategoriLabel">Tambah Kategori</h5>
+        <h5 class="modal-title" id="addKategoriLabel" >Tambah Kategori</h5>
         <button onClick="resesetKategori()"  type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -49,6 +49,7 @@
       <div class="modal-body">
        <div class="form-group">
            <label for="">Nama Kategori</label>
+           <input type="hidden" name="idk">
            <input type="text" name="nama_kategori" id="nama_kategori" class="form-control" >
            <h6 class="text-red" id="pesan"></h6>
        </div>
@@ -56,6 +57,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary btn-sm" onClick="resesetKategori()" data-dismiss="modal">Batal</button>
         <button type="button" id="btn-tambah" onClick="tambahData()" class="btn btn-primary btn-sm">Simpan </button>
+        <button type="button" id="btn-edit" onClick="editData()" class="btn btn-primary btn-sm">Update </button>
       </div>
     </div>
   </div>
