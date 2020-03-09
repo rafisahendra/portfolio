@@ -8,9 +8,12 @@ class Kategori_model extends CI_Model {
 		return $this->db->get('tbl_kategori')->result();
 		
     }
-    public function ketegori_add(){
-        $this->db->set('kategori_nama', $this->input->post('nmk'));
-        $this->db->insert('tbl_kategori');
+    public function ketegori_add($result = array()){
+        $total_array = count($result);
+        if($total_array != 0)
+        {
+      return   $this->db->insert_batch('tbl_kategori', $result);
+        }
     }
 
     public function get_kategoriById(){
@@ -39,7 +42,7 @@ class Kategori_model extends CI_Model {
     public function del_kategori(){
 
         $kategoriId =$this->input->post('idk');
-        $this->db->delete('tbl_kategori', array('kategori_id' => $kategoriId));
+        return  $this->db->delete('tbl_kategori', array('kategori_id' => $kategoriId));
     }
 
 	
