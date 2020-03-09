@@ -27,6 +27,8 @@
   <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="<?php echo base_url() ?>assets/plugins/jquery/jquery.min.js"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed sidebar-collapse">
 <div class="wrapper">
@@ -39,7 +41,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="<?= base_url('Home/') ?>" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -117,7 +119,7 @@
           <img src="<?php echo base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="LOG">
         </div>
         <div class="info">
-          <a href="#" class="d-block">xx</a>
+          <a href="#" class="d-block">rafi sahendra</a>
         </div>
       </div>
 
@@ -160,7 +162,7 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-circle text-info"></i>
-              <p>Informational</p>
+              <p>Information</p>
             </a>
           </li>
         </ul>
@@ -180,8 +182,8 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Charts</li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('Home') ?>">Home</a></li>
+              <li class="breadcrumb-item active"><?php echo $title ?></li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
